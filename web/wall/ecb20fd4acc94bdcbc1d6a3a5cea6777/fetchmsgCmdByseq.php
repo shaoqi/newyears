@@ -1,0 +1,2 @@
+<?php
+echo json_encode(json_decode('{"systemContent":{"state":"Right","msg":""},"dataContent":[{"operType":"add","data":{"seq":3648,"id":10035900,"nickName":"走在乡间的小路上","fullName":"","imgPath":"http://wx.qlogo.cn/mmopen/DVsiadBGJ4ke2NibrTarMXtQEPzFHOvUbibNBN52Q1ZibhgzK2M42nicIdiaiaIynrLMtzYcJ2qLU7dU8rXMib5OOW66VZD4PPX9D57R/0","gender":1,"noteName":""}}]}'));

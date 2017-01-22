@@ -1,0 +1,162 @@
+@charset "utf-8";
+*, body, iframe, li, ol, ul {
+    margin: 0
+}
+
+*, iframe, li, ol, td, th, ul {
+    padding: 0
+}
+
+.clearfix:after, .visibility-hid {
+    visibility: hidden
+}
+
+a img, iframe, img {
+    border: 0
+}
+
+html {
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    -webkit-font-smoothing: antialiased
+}
+
+body {
+    font-size: 14px;
+    color: #242424;
+    font-family: Helvetica Neue, Helvetica, PingFang SC, Hiragino Sans GB, Microsoft YaHei, SimSun, sans-serif
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+    display: block
+}
+
+.fl, .fr {
+    display: inline
+}
+
+dd, div, dl, dt, em, footer, h1, h2, h3, h4, h5, h6, li, nav, ol, p, pre, span, strong, ul {
+    padding: 0;
+    margin: 0
+}
+
+li, ol, ul {
+    list-style: none
+}
+
+iframe {
+    width: 100%
+}
+
+img, input {
+    vertical-align: middle
+}
+
+button, html input[type=button], input[type=reset], input[type=submit] {
+    -webkit-appearance: button;
+    cursor: pointer
+}
+
+table {
+    border-spacing: 0;
+    border-collapse: collapse
+}
+
+button, input, select, textarea {
+    outline: 0;
+    font-family: "微软雅黑";
+    background-color: #FFF
+}
+
+textarea {
+    resize: none
+}
+
+.fl {
+    float: left
+}
+
+.fr {
+    float: right
+}
+
+.clearfix {
+    zoom: 1;
+    display: table
+}
+
+.clearfix:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    font-size: 0
+}
+
+.clear {
+    clear: both
+}
+
+.none {
+    display: none
+}
+
+.block {
+    display: block
+}
+
+.wrap {
+    width: 100%;
+    margin: 0 auto
+}
+
+.wrap990 {
+    width: 990px;
+    margin: 0 auto
+}
+
+@font-face {
+    font-family: THEXO;
+    src: url(/fonts/helveticaneueltpro-thex.otf)
+}
+
+a, a:hover, a:link, a:visited {
+    border: 0;
+    color: #0083ce;
+    font-size: 12px;
+    text-decoration: none
+}
+
+a:active, a:hover {
+    outline: 0;
+    text-decoration: none
+}
+
+.btn-large, .btn-large:hover, .btn-large:link, .btn-large:visited, a.btn-large {
+    width: 100%;
+    line-height: 50px;
+    height: 50px;
+    text-align: center;
+    color: #FFF;
+    font-size: 18px;
+    border-radius: 5px;
+    border: none;
+    text-decoration: none
+}
+
+.btn-blue {
+    background-color: #579bfe
+}
+
+.btn-gray {
+    background-color: #ddd;
+    color: #999
+}
+
+input:-moz-placeholder {
+    color: #ccc
+}
+
+::-webkit-input-placeholder {
+    color: #ccc
+}

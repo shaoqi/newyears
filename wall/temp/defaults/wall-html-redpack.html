@@ -1,0 +1,151 @@
+<!-- 摇红包大屏幕 -->
+<div id="redpack-wall-block" class="g-red-packets m-red-packets">
+		<div class="g-packets-box red-packets-content">
+			<div class="g-top">
+				<div class="g-hd">
+					<div class="round-text">开心摇红包第一轮</div>
+					<div class="play-tite"><img src="/images/redpack/shake-red-packets.png"></div>
+				</div>
+				<div class="g-pendant-l"><img src="/images/redpack/pendant.png"></div>
+				<div class="g-pendant-r">
+					<img src="/images/redpack/send-pack.png" alt="">
+
+					<div class="send-note not-send">
+						<p>红包个数</p>
+						<div><span class="total-number send-number">500</span>个</div>
+					</div>
+					<div class="send-note sended" style="display:none;">
+						<p>已发出红包</p>
+						<div><span class="total-number send-number">20</span>个</div>
+					</div>
+				</div>
+			</div>
+			<div class="g-cont">
+				<div class="nostart" style="display:block">
+					<div class="box">
+						<div class="nostart-cont">
+							<img src="/images/redpack/nostart-blk.png" alt="">
+							<div class="cont-box">
+								<div class="cotr-box"><span id="cotrol-start" class="cotr-btn cotr-start"></span></div>
+								<p class="plays-note">手机端点击“互动-摇红包”参与</p>
+								<div class="redpack-hi-ico" style="display:none;"><img src="/images/redpack/ico.png"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="ing-packet" style="display:none">
+					<div class="box">
+						<div class="ing-cont">
+							<img src="/images/redpack/ing-blk.png" alt="">
+							<div class="cont-box">
+								<div class="cotr-box"><span id="control-playend" class="cotr-btn cotr-end"></span></div>
+								<p class="plays-note">手机端点击“互动-摇红包”参与</p>
+								<div class="redpack-hi-ico" style="display:none"><img src="/images/redpack/ico.png"></div>
+							</div>
+							<div class="shaking-animate">
+								<div class="animate-cont">
+
+									<img class="shake-animate" src="/images/redpack/shake-hanle.png">
+								</div>
+							</div>
+							<div class="has-winner" style="display:none;">
+								<div class="winer-ig"><div class="gold-animate"></div><img src="/images/redpack/unname.jpg">
+									<p>恭喜风吹泪角无痕抢到10元红包一个!</p>
+								</div>
+								
+							</div>
+							<div class="packet-luck luck-lf">
+								<img src="/images/redpack/pack-luck.png">
+							</div>
+							<div class="packet-luck luck-mi">
+								<img src="/images/redpack/pack-luck.png">
+							</div>
+							<div class="packet-luck luck-lr">
+								<img src="/images/redpack/pack-luck.png">
+							</div>
+							<div class="packet-luck luck-pi">
+								<img src="/images/redpack/pack-luck.png">
+							</div>
+						</div>
+					</div>
+				</div>
+				
+			</div>
+			
+			<div class="winner-msg winner-animate" style="display:none;">
+				<div class="win-user">
+					<div class="user-ig"><img src="/images/redpack/unname.jpg"></div>
+					<div class="user-name">风吹泪角无痕</div>
+				</div>
+				<div class="win-prize">抢到<span class="winer-num">10</span>元</div>
+			</div>
+
+		</div>
+		<div class="packets-result" style="display:none;">
+				<div class="shadow"></div>
+				<div class="red-result-cont">
+					<div class="box">
+						<div class="result-rank"><img src="/images/redpack/ranklist.png"></div>
+						<div class="result-rank-list">	
+						</div>
+					</div>
+				</div>
+			</div>
+	</div>
+	<script type="text/html" id="winner">
+		<div class="has-winner">
+			<div class="winer-ig">
+				<div class="gold-animate"></div>
+				<img src="{{if imgpath}} {{imgpath}} {{else}}/images/redpack/unname.jpg{{/if}}">
+				<p>恭喜{{=nickName}}抢到{{money/100}}元红包一个!</p>
+			</div>
+		</div>
+	</script>
+	<script type="text/html" id="win-msg">
+		
+		<div class="winner-msg winner-animate">
+			<div class="win-user">
+				<div class="user-ig"><img src="{{if imgpath}} {{imgpath}} {{else}}/images/redpack/unname.jpg{{/if}}"></div>
+				<div class="user-name">{{=nickName}}</div>
+			</div>
+			<div class="win-prize">抢到<span class="winer-num">{{money/100}}</span>元</div>
+		</div>
+		
+	</script>
+	<script type="text/html" id="result-list">
+
+		<div class="result {{if list.length<=10 && list.length >5 }}resultB{{else if list.length>10}}resultC{{/if}}">
+		{{each list as litm}}
+		<div class="list-winer">
+			<div class="winer-img">
+				{{if $index == 0 }}
+					<div class="first-winer">
+						{{if type=='random'}}
+							{{if list.length<=5}}
+								<img src="/images/redpack/redPacker-luck-max.png">
+							{{else if list.length >5　&& list.length<=10}}
+								<img src="/images/redpack/redPacker-luck-mid.png">
+							{{else}}
+								<img src="/images/redpack/redPacker-luck-min.png">
+							{{/if}}
+						{{else if type == 'fixed'}}
+							{{if list.length<=5}}
+								<img src="/images/redpack/redPacker-sortTime-max.png">
+							{{else if list.length >5　&& list.length<=10}}
+								<img src="/images/redpack/redPacker-sortTime-mid.png">
+							{{else}}
+								<img src="/images/redpack/redPacker-sortTime-min.png">
+							{{/if}}
+						{{/if}}	
+					</div>
+				{{/if}}
+				<img class="ig" src="{{if litm.imgpath}} {{litm.imgpath}} {{else}} /images/redpack/unname.jpg{{/if}}"></div>
+			<div class="winer-name">
+				<span class="sequence">{{$index+1}}</span>
+				{{=litm.nickName}}
+			</div>
+			<div class="winer-count">{{litm.money/100}}元</div>
+		</div>
+		{{/each}}
+		</div>	
+	</script>

@@ -1,0 +1,45 @@
+<script id=lotteryTemp type=text/html><!--抽奖dom-->
+<div id="lottery-wall-block" class="wall-box none">
+    <div class="luck-draw">
+        <div class="custom-bg"></div>
+        <div class="luck-presz">
+            <div class="imgbox"></div>
+            <div class="luck-torryname"></div>
+        </div>
+        <div class="lottery-poper">
+            <div class="lottery-box"></div>
+        </div>
+        <div class="clear"></div>
+        <div class="drawbox">
+            <div class="drawimg">
+                <div class="unknow">
+                    <ul>
+                        <li> {{if dzFlag}}<img src="{{unknowImg}}">{{/if}} <img src="/images/wall/unknow.png"></li>
+                    </ul>
+                </div>
+                <div class="clear"></div>
+                <p class="un-note">求中奖</p></div>
+            <div class="draw-contrbox">
+                <div><span id="luck-draw" class="lotter-btn luck-wait {{if dzFlag}}lotter-btn-dz{{/if}}">开始抽奖</span>
+                </div>
+                <p class="latter-totalnum">共有<span></span>人参与抽奖</p></div>
+        </div>
+    </div>
+</div></script>
+<script id=winHeadTemp type=text/html><!--中奖头像-->
+<div class="lottery-limt" data-id="{{id}}">
+    <div class="box">
+        <div class="lottery-remove"><i class="hi-error2"></i></div>
+        <div class="lottery-crown"><img src="/images/wall/crown.png"></div>
+        <img class="lottery-avatar" src="{{imgsrc}}"> <img style="display:none;" class="lottery-avatar" src=""></div>
+    <div class="nickname"><span>{{#nickName}}</span></div>
+</div></script>
+<script id=winAniTemp type=text/html><!--中奖动画dom-->
+<div id="winnerDom" class="prizeIn">
+    <div id="winnerAni" class="winner"><img class="tou" src="{{imgsrc}}">
+        <p>{{#nickName}}</p>
+        <div class="crown "><img src="/images/wall/crown.png "></div>
+    </div>
+    <img id="ribbonAni" class="ribbon" src="/images/wall/ribbon.png">
+    <div id="raysAni" class="rays"></div>
+</div></script>
